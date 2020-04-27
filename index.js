@@ -11,9 +11,9 @@ $('form').on('submit', function(event) { //consigue datos de la tabla
     console.log('User', user);
     console.log('Email', email);
 
-    const tr = (`<tr><td>${user}</td><td>${email}</td></tr>`); // agrega el último elemento de la tabla(no encuentro manera de recargar la tabla correctamente de una)
+    // const tr = (`<tr><td>${user}</td><td>${email}</td></tr>`); // agrega el último elemento de la tabla(no encuentro manera de recargar la tabla correctamente de una)
 
-    $('table').append(tr); //agrega el último elemento a la tabla
+    // $('table').append(tr); //agrega el último elemento a la tabla
     $.ajax({    //envía la tabla
         method: 'POST',
         url: 'http://localhost:3000/register',

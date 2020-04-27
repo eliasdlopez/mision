@@ -42,10 +42,9 @@ app.use(function(req, res, next) {
     res.send(console.log('Usuario registrado en la DB'));
   });
 
-  app.get('/', (req, res) => { // muestra todos los documentos
-      const user = Users.find(function(error, articles) {
-         return res.send(JSON.stringify(articles)); 
-      });
+  app.get('/', async (req, res) => { // muestra todos los documentos
+      const user = await Users.find();
+         res.send(JSON.stringify(user)); 
   });
 
   app.listen(3000, () => console.log('Listening on port 3000!'));
